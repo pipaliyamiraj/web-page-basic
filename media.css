@@ -1,0 +1,57 @@
+/* @media screen and (max-width:962px){
+    .logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+     
+} */
+
+.checkbtn {
+    font-size: 30px;
+    color: #333;
+    cursor: pointer;
+    display: none; /* Hidden by default */
+    line-height: 80px;
+    margin-right: 20px;
+}
+
+/* Checkbox for toggle */
+#check {
+    display: none;
+}
+
+/* Responsive design */
+@media (max-width: 1000px) {
+    .checkbtn {
+        display: block; /* Show hamburger on mobile */
+    }
+
+    .nav-links {
+        display: none; /* Hide links by default on mobile */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        background: #ddd;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .nav-links li {
+        margin: 10px 0; /* Vertical spacing for mobile */
+    }
+
+    .nav-hover{
+        color: #800000;
+        text-decoration: underline;
+    }
+
+    /* Show nav-links when checkbox is checked */
+    #check:checked ~ .navdiv .nav-links {
+        display: flex;
+    }
+}
